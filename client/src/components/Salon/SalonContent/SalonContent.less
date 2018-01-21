@@ -1,0 +1,64 @@
+@import '../../../style-common/variables.less';
+
+.salon-tab-content {
+  border-top: 24px solid lighten(#eeeeee, 4%);
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: @page-container-padding;
+    padding-top: 0;
+    li {
+      height: 47px;
+      line-height: 3;
+      border-bottom: 1px solid #eeeeee;
+      font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light',
+        'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+      color: #202020;
+
+      &::before {
+        float: left;
+        padding-right: @page-container-padding;
+        margin-top: 1px;
+      }
+
+      &.pin {
+        &::before {
+          content: url(../../../img/pin.svg);
+          padding-right: calc(@page-container-padding + 3px);
+        }
+      }
+
+      &.clock {
+        &::before {
+          content: url(../../../img/clock.svg);
+        }
+        &::after {
+          content: url(../../../img/arrow-down.svg);
+          padding-left: @page-container-padding;
+        }
+      }
+
+      &.phone {
+        &::before {
+          content: url(../../../img/phone.svg);
+        }
+      }
+
+      &.web {
+        &::before {
+          content: url(../../../img/web.svg);
+          margin-top: 2px;
+        }
+      }
+      clear: both;
+    }
+  }
+  .salon-content {
+    padding: 15px;
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+      Helvetica, Arial, 'Lucida Grande', sans-serif;
+    color: #2b2b2b;
+    font-size: 15;
+    text-align: justify;
+  }
+}

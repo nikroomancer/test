@@ -1,0 +1,53 @@
+@import '../../../style-common/variables.less';
+
+.salon-hero {
+  background: url(../../../img/salon.png) no-repeat center;
+  background-size: 100%;
+  max-height: 267px;
+  height: 267px;
+  padding-left: @page-container-padding;
+}
+.salon-hero-text {
+  color: green;
+}
+.store-info {
+  -webkit-flex: 2.5 0 0;
+  flex: 2.5 0 0;
+  > div {
+    &:nth-child(1) {
+      font-family: 'Font Bureau - MillerBanner Light';
+      font-size: 22px;
+      color: #202020;
+      padding-top: 200px;
+      color: white;
+    }
+    &:nth-child(2) {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      width: 110px;
+      div {
+        margin-top: 11px;
+        -webkit-flex: 1 0 0;
+        flex: 1 0 0;
+        height: 14px;
+        &.empty-star {
+          background: url(../../../img/empty-star-large.svg) no-repeat center;
+        }
+        &.filled-star {
+          background: url(../../../img/filled-star-large.svg) no-repeat center;
+        }
+        &.number-rated {
+          font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light',
+            'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+          font-weight: 300;
+          color: white;
+          font-size: 13px;
+          margin-top: 9px;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+}

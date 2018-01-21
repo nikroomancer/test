@@ -1,0 +1,84 @@
+@import '../../style-common/fonts.less';
+@import '../../style-common/variables.less';
+
+@options-width: 19px;
+@heart-width: 32px;
+.absolute {
+  position: absolute; /* Set the navbar to fixed position */
+}
+
+.navbar {
+  z-index: 999;
+  overflow: hidden;
+  top: 0; /* Position the navbar at the top of the page */
+  list-style-type: none;
+  padding: 0 @page-container-padding;
+  margin: 0;
+  height: @navbar-height;
+  width: calc(100% - (2*@page-container-padding));
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  li {
+    &.title {
+      -webkit-flex: 3 0 0;
+      flex: 3 0 0;
+      text-align: center;
+      font-family: 'Font Bureau - MillerBanner Light';
+      font-size: 22px;
+      color: #202020;
+      line-height: 3;
+    }
+    &.arrow-left {
+      -webkit-flex: 1 0 0;
+      flex: 1 0 0;
+      background: url(../../img/arrow-left.svg) no-repeat center;
+      width: @arrow-width;
+      background-position: left;
+      a {
+        padding-bottom: @navbar-height;
+        padding-left: @arrow-width;
+        float: left;
+      }
+    }
+    &.options {
+      -webkit-flex: 1 0 0;
+      flex: 1 0 0;
+      background: url(../../img/options.svg) no-repeat center;
+      width: @options-width;
+      background-position: right;
+      span {
+        cursor: pointer;
+        padding-bottom: @navbar-height;
+        padding-left: @options-width;
+        float: right;
+      }
+    }
+    &.heart {
+      -webkit-flex: 1 0 0;
+      flex: 1 0 0;
+      background: url(../../img/heart.svg) no-repeat center;
+      width: @heart-width;
+      background-position: right;
+      span {
+        cursor: pointer;
+        padding-bottom: @navbar-height;
+        padding-left: @heart-width;
+        float: right;
+      }
+    }
+    &.arrow-left-white {
+      -webkit-flex: 1 0 0;
+      flex: 1 0 0;
+      background: url(../../img/arrow-left-white.svg) no-repeat center;
+      width: @arrow-width;
+      background-position: left;
+      a {
+        padding-bottom: @navbar-height;
+        padding-left: @arrow-width;
+        float: left;
+      }
+    }
+  }
+}

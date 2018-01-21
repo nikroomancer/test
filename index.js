@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+require('./routes/listRoutes.js')(app);
+
 if (process.env.NODE_ENV === 'production') {
   //express will serve up production assets
   //like our main.js file, or main.css file!

@@ -1,0 +1,22 @@
+@import '../../../style-common/variables.less';
+
+.salon-tab-schoice {
+  height: 50px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  > div {
+    cursor: pointer;
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
+    text-align: center;
+    line-height: 3;
+    &:hover {
+      background-color: lighten(@gold-color, 40%);
+    }
+    &.active {
+      border-bottom: 2px solid @gold-color;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import '../../../style-common/variables.less';
+
+.accordion {
+  font-size: 15px;
+  position: relative;
+  height: @filter-height;
+  display: block;
+  border-bottom: 1px solid @gold-color;
+  border-top: 1px solid @gold-color;
+  cursor: pointer;
+  padding: 0 @page-container-padding;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  -webkit-transition: width 300ms; /* Safari */
+  transition: width 300ms;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 300;
+  color: #202020;
+
+  &::after {
+    content: url(../../../img/arrow-down.svg);
+    float: right;
+    -webkit-transition: 300ms linear all;
+    transition: 300ms linear all;
+  }
+
+  &:hover {
+    background-color: lighten(@gold-color, 30%);
+  }
+
+  &.active {
+    &::after {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+      -webkit-transition: 300ms linear all;
+      transition: 300ms linear all;
+    }
+  }
+}
+
+:global(#filter-panel-09382504985) {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: white;
+  width: 100%;
+}
+
+.panel-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+      Helvetica, Arial, 'Lucida Grande', sans-serif;
+    height: 50px;
+    padding-left: 48px;
+    line-height: 3;
+    border-bottom: 1px solid @gold-color;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten(@gold-color, 40%);
+    }
+  }
+}
