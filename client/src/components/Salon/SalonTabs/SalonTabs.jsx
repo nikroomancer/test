@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import CSSModules from 'react-css-modules';
 import * as styles from './SalonTabs.less';
 
@@ -24,3 +25,8 @@ export default class SalonTabs extends Component {
     );
   }
 }
+
+SalonTabs.propTypes = {
+  salonTab: PropTypes.string,
+  toggleSalonTab: PropTypes.func
+};

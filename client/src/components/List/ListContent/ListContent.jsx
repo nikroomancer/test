@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -18,10 +19,10 @@ function mapDispatchToProps(dispatch) {
 
 @connect(mapStateToProps, mapDispatchToProps)
 @CSSModules(styles)
-export default class Filter extends Component {
+export default class ListContent extends Component {
   componentDidMount() {
-    const { fetchList } = this.props;
-    fetchList();
+    const { fetchList, salons } = this.props;
+    !salons && fetchList();
   }
 
   renderCard = () => {
@@ -79,3 +80,9 @@ export default class Filter extends Component {
     return <div styleName="container">{salons && this.renderCard()}</div>;
   }
 }
+
+ListContent.propTypes = {
+  salons: PropTypes.array,
+  selectedPrice: PropTypes.object,
+  fetchList: PropTypes.func
+};

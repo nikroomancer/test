@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import CSSModules from 'react-css-modules';
 import { Link } from 'react-router-dom';
 import * as styles from './Navbar.less';
@@ -21,3 +22,11 @@ export default class Navbar extends Component {
     );
   }
 }
+
+Navbar.propTypes = {
+  absolute: PropTypes.bool,
+  backIcon: PropTypes.string,
+  backLink: PropTypes.string,
+  title: PropTypes.string,
+  icon: PropTypes.string
+};

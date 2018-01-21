@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import CSSModules from 'react-css-modules';
 import * as styles from './SalonContent.less';
 
@@ -35,3 +36,7 @@ export default class SalonContent extends Component {
     );
   }
 }
+
+SalonContent.propTypes = {
+  salon: PropTypes.object
+};

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import CSSModules from 'react-css-modules';
 import * as styles from './SalonHero.less';
@@ -35,3 +36,7 @@ export default class SalonHero extends Component {
     );
   }
 }
+
+SalonHero.propTypes = {
+  salon: PropTypes.object
+};

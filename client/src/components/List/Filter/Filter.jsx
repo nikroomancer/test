@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import CSSModules from 'react-css-modules';
 import { connect } from 'react-redux';
 import {
@@ -74,3 +75,12 @@ export default class Filter extends Component {
     );
   }
 }
+
+Filter.propTypes = {
+  filterActive: PropTypes.bool,
+  panelMaxHeight: PropTypes.number,
+  selectedPrice: PropTypes.object,
+  toggleFilterActive: PropTypes.func,
+  setPanelMaxHeight: PropTypes.func,
+  setSelectedPrice: PropTypes.func
+};

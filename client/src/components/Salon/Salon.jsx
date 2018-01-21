@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { withRouter } from 'react-router-dom';
@@ -62,3 +63,11 @@ class Salon extends Component {
   }
 }
 export default withRouter(Salon);
+
+Salon.propTypes = {
+  salon: PropTypes.object,
+  salonTab: PropTypes.string,
+  toggleSalonTab: PropTypes.func,
+  fetchList: PropTypes.func,
+  history: PropTypes.object
+};
