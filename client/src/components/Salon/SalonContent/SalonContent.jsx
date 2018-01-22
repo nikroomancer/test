@@ -10,20 +10,20 @@ export default class SalonContent extends Component {
     const date = new Date();
     const today = date.getDay();
     return [
-      <ul key="salong-info-list">
+      <ul key="salong-info-list-0">
         <li styleName="pin">{salon.address}</li>
         <li styleName="clock">{salon.openingHours[today]}</li>
         <li styleName="phone">{salon.telephone}</li>
         <li styleName="web">{salon.website}</li>
       </ul>,
-      <div key="salon-content" styleName="salon-content">
+      <div key="salon-content-0" styleName="salon-content">
         {salon.content}
       </div>
     ];
   }
 
   renderSalonSchedule() {
-    return [<div styleName="salon-content">Some scheduling content :)</div>];
+    return <div styleName="salon-content">Some scheduling content :)</div>;
   }
 
   render() {
